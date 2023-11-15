@@ -1,41 +1,72 @@
-body {
-    width: 1140px;
-}
-header {
-    height: 200px;
-    background-color: orangered;
-}
-main {
-    display: flex;    
-    margin-top: 30px;
-    gap: 20px;
-}
-.main__block {    
+body {    
     display: flex;
     flex-direction: column;
-    gap: 20px; 
-    width: 100%;  
+    gap: 30px; 
+    width: 100vw;      
 }
-.main__block__header {
+header {
+    height: 100px;
+    background-color: red;
+    width: 480px;
+}
+.banner {
+    height: 190px;
+    background-color: aqua;
     width: 100%;
+}
+main {
+    display: flex;
+    gap: 30px;
+    width: 100vw;
+}
+.main__block {
+    width: 100%;
+}
+.main__block__banner {    
     height: 250px;
-    background-color: orange;
+    background-color: gray;
 }
 .main__block__border {
-    width: 100%;
-    border-bottom: 20px solid orange;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;    
 }
-@media only screen and (min-width:768px) and (max-width:1024px) {
-    .main__block:first-child {
-        display: none;
+.main__border__b {    
+    border-bottom: 10px solid gray;    
+}
+.main__block_1 {
+    display: none;
+}
+.main__block_2 {
+    display: none;
+}
+@media only screen and (min-width:481px) and (max-width:768px) {  
+    .main__block_1 {
+        display: flex;
+        flex-direction: column;
     }
+    body {
+        width: 100vw;
+    }
+    header {
+        width: 50%;
+    }    
 }  
-@media only screen and (min-width:320px) and (max-width:767px) {
-    .main__block {
-        width: 100%;        
+@media only screen and (min-width:769px) and (max-width:1140px) {
+    .main__block_1 {
+        display: flex;
+        flex-direction: column;
     }
-    main {
-        flex-wrap: wrap;
+    .main__block_2 {
+        display: flex;
+        flex-direction: column;
     }
+    body {
+        width: 100vwpx;
+    }
+    header {
+        width: 33.33%%;
+    }  
 }
 
