@@ -1,41 +1,107 @@
 body {
-    width: 1140px;
+    width: 100vw;
 }
 header {
-    height: 200px;
-    background-color: orangered;
+    height: 20vw;
+    background-color: rgb(255, 0, 55);
+}
+.text {
+    font-size: 40px;
+    color: white;
 }
 main {
     display: flex;    
     margin-top: 30px;
     gap: 20px;
 }
-.main__block {    
+.block {
+    background-color: rgb(255, 0, 55);
     display: flex;
-    flex-direction: column;
-    gap: 20px; 
-    width: 100%;  
+    justify-content: center;
+    align-items: center;
 }
-.main__block__header {
-    width: 100%;
-    height: 250px;
-    background-color: orange;
+.block234 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 66%;
+    gap: 30px;
 }
-.main__block__border {
+.block2 {
     width: 100%;
-    border-bottom: 20px solid orange;
+    height: 20vw;
+}
+.block5 {
+    width: 33%;
+}
+.block3 {
+    width: calc(50% - 20px);
+    height: 20vw;
+}
+.block4 {
+    width: calc(50% - 20px);
+    height: 20vw;
 }
 @media only screen and (min-width:768px) and (max-width:1024px) {
-    .main__block:first-child {
-        display: none;
+    main {
+        flex-direction: column;
+    }
+    .block234 {
+        width: 100%;
+    }
+    .block2 {
+        width: calc(33% - 20px)
+    }
+    .block3 {
+        width: calc(33% - 20px)
+    }
+    .block4 {
+        width: calc(33% - 20px)
+    }  
+    .block5 {
+        width: 100%;
+        height: 230px;
     }
 }  
-@media only screen and (min-width:320px) and (max-width:767px) {
-    .main__block {
+@media only screen and (max-width:320px) and (orientation: portrait) {    
+    main {
+        flex-direction: column;
+    }
+    .block234 {
         width: 100%;        
     }
-    main {
-        flex-wrap: wrap;
+    .block2 {
+        height: 150px;
+    }
+    .block3 {
+        height: 150px;
+    }
+    .block4 {
+        height: 150px;
+    }
+    .block5 {
+        width: 100%;
+        height: 150px;
+    }    
+}
+@media only screen and (min-width:321px) and (orientation: landscape) {
+    header {
+        height: 80px;
+    }
+    .block234 {
+        width: 100%;
+    }
+    .block2 {
+        height: 80px;
+    }
+    .block3 {
+        width: 100%;
+        height: 80px;
+    }
+    .block4 {
+        display: none;
+    }
+    .block5 {
+        display: none;
     }
 }
 
